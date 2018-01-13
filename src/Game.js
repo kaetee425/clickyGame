@@ -1,6 +1,10 @@
 import React from 'react'
 import friends from './friends.json'
 import Card from './Card/Card.js'
+import Nav from './Nav/Nav.js';
+import Jumbotron from './Jumbotron/Jumbotron.js';
+import Footer from './Footer/Footer.js';
+import './game.css'
 // console.log(friends)
 
 export default class Game extends React.Component {
@@ -69,12 +73,20 @@ export default class Game extends React.Component {
 		console.log('state: ', this.state)
 		return (
 			<div>
-			<h3>Score: {this.state.score}</h3>
-			<h3>{this.state.title}</h3>
-			<h3>Top Score: {this.state.topScore}</h3>
-			{this.state.images.map(friend => (
-				<Card onClick={this.onClicked} friend={friend} key={friend.id}/>
-			))}
+				<Nav>
+					<li>{this.state.title}</li>
+					<li>Score: {this.state.score} || Top Score: {this.state.topScore}</li>
+				</Nav>
+
+				<Jumbotron />
+
+				<div className="pictures">
+				{this.state.images.map(friend => (
+					<Card onClick={this.onClicked} friend={friend} key={friend.id}/>
+				))}
+				</div>
+
+				<Footer />
 			</div>
 		)
 	}

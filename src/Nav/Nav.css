@@ -1,0 +1,13 @@
+.navbar {
+	background: skyblue;
+	width: 100%;
+	min-height: 100px;
+}
+
+li {
+	display: inline-block;
+	width: 50%;
+	font-size: 25px;
+	padding-top: 35px;
+	text-align: center;
+}
