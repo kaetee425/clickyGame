@@ -2,8 +2,9 @@
 	min-height: 300px;
 	padding-top:75px;
 	text-align: center;
-	line-height: 100px;
+	line-height: 70px;
 	background-image: url(./header.jpeg);
 	color: yellow;
-	font-size: 25px;
+	font-size: 30px;
+	font-family: 'Indie Flower', cursive;
 }
